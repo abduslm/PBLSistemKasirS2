@@ -1,0 +1,284 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 9, 2025, 10:58:00 PM
+    Author     : hpfq1
+*/
+
+.Background{
+    -fx-background-color: #D9D9D9;
+}
+
+.BackgroundNavigator{
+    -fx-background-color: #E7E7E7;
+}
+
+.separator .line {
+    -fx-border-color: black; 
+    -fx-border-width: 1.5px; 
+}
+
+.radiusNavigator{
+    -fx-background-radius: 45px;
+}
+
+.BackgroundNavigatorTanggal{
+    -fx-background-color: #C5D8F1;
+    -fx-background-radius: 50px;
+    -fx-padding: 10;
+    -fx-alignment: center;
+    -fx-cursor: hand;
+}
+
+.Backgroundpayment{
+    -fx-background-color: #F5F5F5;
+}
+
+.Backgroundpaymentupper{
+    -fx-background-color: #FEFEFE;
+}
+
+.column-header{
+    -fx-background-color: #C5D8F1;
+    -fx-background-radius: 50px;
+}
+
+.btnExit{
+    -fx-background-color: #D32F2F;
+    -fx-background-radius: 50px;
+}
+
+
+.ColumnHeaderUser{
+    -fx-background-color: #C5D8F1;
+    -fx-background-radius: 20px;
+}
+
+.Label{
+    -fx-font-family: "KacstOffice";
+    -fx-font-size: 14px;
+}
+
+.LabelKategori{
+    -fx-font-family: "KacstOffice";
+    -fx-font-size: 14px;
+}
+
+.BackgroundPaymentUnder{
+    -fx-background-radius: 50px;
+    -fx-background-color: #E7E7E7;
+    -fx-font-weight: 600;
+
+}
+
+.ImagePayment{
+    -fx-fit-width: 24;
+    -fx-fit-height: 24;
+    -fx-preserve-ratio: true;
+}
+
+.BackgroundUnder{
+    -fx-background-radius: 45px;
+    -fx-background-color: #FFFFFF;
+}
+
+.BackgroundUnder2{
+    -fx-background-color: #FFFFFF;
+}
+
+
+
+.labelPlaceOrder{
+    -fx-font-family: "Kantumruy Pro";
+    -fx-font-size: 16px;
+    -fx-font-weight: 600; /* Medium */
+    -fx-text-fill: white;
+
+}
+
+.ImageKategori{
+    -fx-background-color: #C5D8F1;
+    -fx-background-radius: 45px;
+    
+}
+
+.Kategorimenuall{
+    -fx-background-radius: 10px;
+    -fx-background-color: #F5F5F5;
+}
+
+
+
+.search{
+    -fx-background-radius: 30px;
+}
+
+.SearchView{
+    -fx-background-color: #D9D9D9;
+    -fx-background-radius: 20px;
+}
+
+.textfield-custom {
+    -fx-background-color: white;
+    -fx-font-size: 16px;
+    -fx-background-radius: 20px;
+    -fx-border-color: transparent;
+    -fx-border-radius: 20px;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-prompt-text-fill: #888888; /* Warna teks placeholder */
+    -fx-padding: 5 10 5 10;
+}
+
+.MenuBack{
+    -fx-background-color: #F5F5F5;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0.1, 0, 0);
+
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background-radius: 15px;
+    -fx-border-color: transparent;
+    -fx-border-radius: 15px;
+    -fx-padding: 5;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+    -fx-background-radius: 15px;
+}
+
+.scroll-pane .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent; /* Menghilangkan biru */
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-alignment: CENTER;
+    -fx-font-family: "Kantumruy Pro";
+    -fx-font-size: 13px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #333;
+    -fx-padding: 5 10 5 10;
+}
+
+/* Baris isi */
+.table-view .table-row-cell {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #2D2D2D;
+    -fx-font-size: 12px;
+}
+
+.jawa{
+    -fx-font-family: "KacstOffice";
+    -fx-font-size: 14px;
+    -fx-text-fill: black;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #CCCCCC transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+
+.Remove{
+    -fx-background-radius: 45px;
+    -fx-background-color: #F44336;
+    -fx-text-fill: white;
+    
+}
+.btnRemove:hover {
+    -fx-background-color: #B71C1C;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+.btnRemove:pressed {
+    -fx-background-color: #A31212;
+    -fx-translate-y: 2px;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+
+.btnLogout:pressed {
+    -fx-background-color: #A31212;
+    -fx-translate-y: 2px;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+
+.Kategorimenu {
+    -fx-pref-width: 131.542px;
+    -fx-pref-height: 86px;
+    -fx-background-color: #F5F5F5;
+    -fx-background-radius: 10px;
+    -fx-border-color: #E0E0E0;
+-fx-border-radius: 10px;
+
+}
+.Kategorimenu:hover {
+    -fx-background-color: #d0cece;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+.Kategorimenu:pressed {
+    -fx-background-color: #848282;
+    -fx-translate-y: 2px;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+.Kategorimenu.selected {
+    -fx-background-color: #848282;
+    -fx-text-fill: white;
+}
+
+
+
+.Placeorder{
+    -fx-background-radius: 45px;
+    -fx-background-color: #61B460;
+}
+.btnKonfirmasi:hover {
+    -fx-background-color: #038b11;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+.btnKonfirmasi:pressed {
+    -fx-background-color: #61B460;
+    -fx-translate-y: 2px;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+.btnTambahan{
+    -fx-background-color: #a7cfb6;
+    -fx-background-radius: 50px;
+}
+.btnTambahan:pressed {
+    -fx-background-color: #3f8f5d;
+    -fx-translate-y: 2px;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}

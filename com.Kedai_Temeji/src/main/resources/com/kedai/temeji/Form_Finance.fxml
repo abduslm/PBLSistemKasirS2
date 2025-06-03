@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="AP_finance" focusTraversable="true" prefHeight="700.0" prefWidth="1280.0" styleClass="Background" stylesheets="@FinanceDesign.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kedai.temeji.FinanceController">
+   <children>
+      <AnchorPane fx:id="AP_sidebarAdmin" focusTraversable="true" layoutY="2.0" prefHeight="700.0" prefWidth="125.0" styleClass="LeftBackground" stylesheets="@FinanceDesign.css">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="28.0" layoutY="27.0" styleClass="radius">
+               <image>
+                  <Image url="@../Image/Logo%20Kedai%20Temeji%204.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="2.0" layoutY="125.0" prefHeight="50.0" prefWidth="120.0" styleClass="nav-button" stylesheets="@FinanceDesign.css">
+               <children>
+                  <ImageView fx:id="IV_home" layoutX="1.0" layoutY="3.0">
+                     <image>
+                        <Image url="@../Image/home.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="45.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lihat Penjualan" wrappingWidth="70.00000000000006" />
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </AnchorPane>
+            <AnchorPane layoutX="28.0" layoutY="611.0" onMouseClicked="#exitt" prefHeight="50.0" prefWidth="50.0" styleClass="btnLogout" stylesheets="@FinanceDesign.css">
+               <children>
+                  <ImageView fx:id="IV_exit" fitHeight="42.0" fitWidth="42.0" layoutX="4.0" layoutY="4.0">
+                     <image>
+                        <Image url="@../Image/Exit.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="APPP_lihatPenjualan" layoutX="125.0" layoutY="2.0" prefHeight="700.0" prefWidth="1156.0">
+         <children>
+            <AnchorPane layoutX="25.0" layoutY="79.0" minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="1099.0" styleClass="scroll-pane" stylesheets="@AdminDesign.css">
+               <children>
+                  <AnchorPane layoutX="10.0" layoutY="7.0" prefHeight="85.0" prefWidth="300.0" styleClass="navbarPane" stylesheets="@AdminDesign.css">
+                     <children>
+                        <FontAwesomeIcon glyphName="USERS" layoutX="14.0" layoutY="66.0" selectionEnd="1" size="5em" />
+                        <Label fx:id="lb_nc" layoutX="20.0" layoutY="15.0" prefHeight="21.0" prefWidth="260.0" stylesheets="@AdminDesign.css" text="0" textAlignment="RIGHT">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="LabelNavbar" />
+                              <String fx:value="kanan" />
+                           </styleClass>
+                        </Label>
+                        <Label layoutX="93.0" layoutY="64.0" styleClass="LabelNavbar" stylesheets="@AdminDesign.css" text="Number Of Customer" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="332.0" layoutY="6.0" prefHeight="85.0" prefWidth="300.0" styleClass="navbarPane" stylesheets="@AdminDesign.css">
+                     <children>
+                        <FontAwesomeIcon glyphName="DOLLAR" layoutX="23.0" layoutY="65.0" selectionEnd="1" size="5em" text="" />
+                        <Label fx:id="lb_ti" layoutX="20.0" layoutY="15.0" prefHeight="21.0" prefWidth="260.0" stylesheets="@AdminDesign.css" text="0" textAlignment="RIGHT">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="LabelNavbar" />
+                              <String fx:value="kanan" />
+                           </styleClass>
+                        </Label>
+                        <Label layoutX="87.0" layoutY="63.0" styleClass="LabelNavbar" stylesheets="@AdminDesign.css" text="Today's Income" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="653.0" layoutY="6.0" prefHeight="85.0" prefWidth="300.0" styleClass="navbarPane" stylesheets="@AdminDesign.css">
+                     <children>
+                        <FontAwesomeIcon glyphName="SHOPPING_CART" layoutX="21.0" layoutY="63.0" selectionEnd="1" size="5em" />
+                        <Label fx:id="lb_numberSold" layoutX="15.0" layoutY="15.0" prefHeight="21.0" prefWidth="260.0" stylesheets="@AdminDesign.css" text="0" textAlignment="RIGHT">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="LabelNavbar" />
+                              <String fx:value="kanan" />
+                           </styleClass>
+                        </Label>
+                        <Label layoutX="80.0" layoutY="63.0" styleClass="LabelNavbar" stylesheets="@AdminDesign.css" text="Number Of Sold Product" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="lihatPenjualan_btnLaporan" layoutX="1017.0" layoutY="10.0" onMouseClicked="#btnLaporan" prefHeight="76.0" prefWidth="64.0" styleClass="navbarLaporan" stylesheets="@AdminDesign.css">
+                     <children>
+                        <Label alignment="CENTER" layoutY="22.0" prefHeight="53.0" prefWidth="64.0" text="..." textFill="#242424">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <Separator fx:id="spr_lihatPenjualan" layoutX="25.0" layoutY="178.0" prefHeight="15.0" prefWidth="1099.0" stylesheets="@AdminDesign.css" />
+            <ComboBox fx:id="lihatPenjualan_cbBulan" layoutX="33.0" layoutY="193.0" onAction="#tampilkanChartCustomer" prefHeight="25.0" prefWidth="211.0" />
+            <Label layoutX="25.0" layoutY="51.0" prefHeight="17.0" prefWidth="331.0" text="Lihat Penjualan">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="13.0" layoutY="234.0" prefHeight="456.0" prefWidth="1129.0" stylesheets="@AdminDesign.css">
+               <styleClass>
+                  <String fx:value="Kocak" />
+                  <String fx:value="shadow2" />
+                  <String fx:value="radius" />
+               </styleClass>
+               <children>
+                  <ScrollPane fx:id="sppppp" minViewportWidth="1110.0" prefHeight="456.0" prefWidth="1129.0">
+                     <content>
+                        <AnchorPane maxWidth="2000.0" minHeight="0.0" minWidth="0.0" prefHeight="447.0" prefWidth="1108.0">
+                           <children>
+                              <BarChart fx:id="chartBar_customer" legendSide="TOP" maxWidth="2000.0" prefHeight="449.0" prefWidth="1114.0" title="Income's Chart" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-9.0">
+                                 <xAxis>
+                                    <CategoryAxis label="Tanggal" prefHeight="20.0" prefWidth="1041.0" side="BOTTOM" tickLabelRotation="-18.4" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis prefHeight="383.0" prefWidth="44.0" side="LEFT" />
+                                 </yAxis>
+                              </BarChart>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="IV_logotemeji" fitHeight="50.0" fitWidth="135.0" layoutX="1000.0" layoutY="14.0">
+               <image>
+                  <Image url="@../Image/Admin%20Indicator%202.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txTotalPerB" editable="false" layoutX="668.0" layoutY="194.0" prefHeight="30.0" prefWidth="455.0" text="Total Pemasukan per Bulan : Rp. 10000000">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+            </TextField>
+            <StackPane fx:id="lihatPenjualan_StkPane" layoutX="11.0" layoutY="-1.0" prefHeight="701.0" prefWidth="989.0" visible="false">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="660.0" prefWidth="989.0">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="693.0" prefWidth="965.0">
+                           <children>
+                              <TableView fx:id="lihatPenjualan_tb" layoutX="7.0" layoutY="47.0" onKeyReleased="#laporanMenuCari" prefHeight="639.0" prefWidth="956.0" stylesheets="@AdminDesign.css">
+                                 <columns>
+                                    <TableColumn fx:id="kolom_no" editable="false" prefWidth="49.333343505859375" text="No." />
+                                    <TableColumn fx:id="lihatPenjualan_kolomId" editable="false" prefWidth="103.33331298828125" text="ID Menu" />
+                                    <TableColumn fx:id="lihatPenjualan_kolomNama" editable="false" prefWidth="420.66668701171875" text="Nama Menu" />
+                                    <TableColumn fx:id="lihatPenjualan_kolomUk" editable="false" prefWidth="135.33331298828125" text="Ukuran" />
+                                    <TableColumn fx:id="lihatPenjualan_kolomJumlah" prefWidth="59.3333740234375" text="DiJual" />
+                                    <TableColumn fx:id="lihatPenjualan_kolomP" editable="false" prefWidth="182.0" text="Jumlah Pendapatan" />
+                                 </columns>
+                              </TableView>
+                              <TextField fx:id="lihatPenjualan_txCari" layoutX="230.0" layoutY="14.0" onKeyReleased="#laporanMenuCari" prefHeight="25.0" prefWidth="372.0" />
+                              <ComboBox fx:id="lihatPenjualan_cbTanggal" layoutX="14.0" layoutY="14.0" onAction="#laporanMenuList" prefHeight="25.0" prefWidth="197.0" />
+                              <TextField fx:id="tx_Tdijual" editable="false" layoutX="633.0" layoutY="14.0" />
+                              <TextField fx:id="tx_Tpendapatan" editable="false" layoutX="801.0" layoutY="14.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

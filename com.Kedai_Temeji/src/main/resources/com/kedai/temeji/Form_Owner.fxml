@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="AP_owner" focusTraversable="true" prefHeight="700.0" prefWidth="1280.0" styleClass="Background" stylesheets="@OwnerDesign.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kedai.temeji.OwnerController">
+   <children>
+      <AnchorPane fx:id="AP_sidebar" prefHeight="700.0" prefWidth="125.0" styleClass="LeftBackground" stylesheets="@OwnerDesign.css">
+         <children>
+            <ImageView layoutX="28.0" layoutY="27.0">
+               <image>
+                  <Image url="@../Image/Logo%20Kedai%20Temeji%204.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="40.0" layoutY="267.0" onMouseClicked="#lihatAktivitas" prefHeight="64.0" prefWidth="52.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <AnchorPane layoutY="124.0" onMouseClicked="#lihatPenjualan" prefHeight="50.0" prefWidth="120.0" styleClass="nav-button" stylesheets="@OwnerDesign.css">
+               <children>
+                  <ImageView layoutX="2.0" layoutY="3.0">
+                     <image>
+                        <Image url="@../Image/home.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="45.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lihat Penjualan" wrappingWidth="70.00000000000006" />
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </AnchorPane>
+            <AnchorPane layoutY="186.0" onMouseClicked="#lihatMenu" prefHeight="50.0" prefWidth="120.0" styleClass="nav-button" stylesheets="@OwnerDesign.css">
+               <children>
+                  <Text layoutX="45.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lihat Menu" wrappingWidth="70.00000000000006" />
+                  <ImageView fitHeight="37.0" fitWidth="34.0" layoutX="6.0" layoutY="7.0">
+                     <image>
+                        <Image url="@../Image/tabler_report-analytics.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </AnchorPane>
+            <AnchorPane layoutY="313.0" onMouseClicked="#lihatAktivitas" prefHeight="50.0" prefWidth="120.0" styleClass="nav-button" stylesheets="@OwnerDesign.css">
+               <children>
+                  <ImageView fitHeight="42.0" fitWidth="34.0" layoutX="9.0" layoutY="4.0">
+                     <image>
+                        <Image url="@../Image/healthicons_i-schedule-school-date-time-outline.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="45.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log Aktivitas" wrappingWidth="70.00000000000006" />
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </AnchorPane>
+            <AnchorPane layoutX="38.0" layoutY="624.0" onMouseClicked="#exitt" prefHeight="50.0" prefWidth="50.0" styleClass="btnLogout" stylesheets="@OwnerDesign.css">
+               <children>
+                  <ImageView fx:id="IV_exit" fitHeight="42.0" fitWidth="42.0" layoutX="4.0" layoutY="4.0">
+                     <image>
+                        <Image url="@../Image/Exit.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </AnchorPane>
+            <AnchorPane layoutY="252.0" onMouseClicked="#lihatUser" prefHeight="50.0" prefWidth="120.0" styleClass="nav-button" stylesheets="@OwnerDesign.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="13.0" layoutY="11.0">
+                     <image>
+                        <Image url="@../Image/icon-park-twotone_data-lock.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="45.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lihat      User" wrappingWidth="70.00000000000006" />
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="APPP_LogA" layoutX="125.0" prefHeight="700.0" prefWidth="1153.0" visible="false">
+         <children>
+            <AnchorPane layoutX="24.0" layoutY="74.0" prefHeight="580.0" prefWidth="1105.0" stylesheets="@OwnerDesign.css">
+               <children>
+                  <TableView fx:id="tb_log" layoutX="7.0" layoutY="10.0" prefHeight="560.0" prefWidth="1091.0">
+                     <columns>
+                        <TableColumn fx:id="kolom_idLog" prefWidth="84.66661071777344" text="ID Aktivitas" />
+                        <TableColumn fx:id="kolom_idUser" prefWidth="110.0" text="ID User" />
+                        <TableColumn fx:id="kolom_ketLog" prefWidth="649.9999389648438" text="Keterangan" />
+                        <TableColumn fx:id="kolom_waktuLog" prefWidth="243.3333740234375" text="Waktu" />
+                     </columns>
+                  </TableView>
+               </children>
+               <styleClass>
+                  <String fx:value="Kocak" />
+                  <String fx:value="radius" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </AnchorPane>
+            <ImageView fitHeight="50.0" fitWidth="135.0" layoutX="1000.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/Owner%20Indicator%202.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="24.0" layoutY="40.0" prefHeight="27.0" prefWidth="144.0" text="Log Aktivitas">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cb_tanggalLog" layoutX="168.0" layoutY="41.0" onAction="#logDataShow" prefWidth="150.0" />
+            <AnchorPane fx:id="Log_hapus" layoutX="949.0" layoutY="20.0" onMouseClicked="#hapusLogPerHari" prefHeight="50.0" prefWidth="25.0" styleClass="hapusLog" stylesheets="@OwnerDesign.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="1.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/icons8-trash-50.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="APPP_lihatMenu" layoutX="125.0" prefHeight="700.0" prefWidth="1153.0">
+         <children>
+            <AnchorPane layoutX="15.0" layoutY="80.0" prefHeight="589.0" prefWidth="1123.0" stylesheets="@OwnerDesign.css">
+               <children>
+                  <TableView fx:id="tb_kelolaMenu" layoutX="9.0" layoutY="14.0" prefHeight="566.0" prefWidth="1105.0">
+                     <columns>
+                        <TableColumn fx:id="kolom_idMenu" prefWidth="84.0" text="ID Menu" />
+                        <TableColumn fx:id="kolom_namaMenu" prefWidth="396.6666717529297" text="Nama Menu" />
+                        <TableColumn fx:id="kolom_ukuranMenu" prefWidth="130.66668701171875" text="Ukuran" />
+                        <TableColumn fx:id="kolom_kategoriMenu" prefWidth="173.33331298828125" text="Kategori" />
+                        <TableColumn fx:id="kolom_hargaMenu" prefWidth="196.00006103515625" text="Harga" />
+                        <TableColumn fx:id="kolom_stokMenu" prefWidth="118.0" text="Stok" />
+                     </columns>
+                  </TableView>
+               </children>
+               <styleClass>
+                  <String fx:value="Kocak" />
+                  <String fx:value="radius" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </AnchorPane>
+            <Label layoutX="24.0" layoutY="46.0" prefHeight="27.0" prefWidth="134.0" text="Lihat Menu">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="164.0" layoutY="31.0" prefHeight="42.0" prefWidth="798.0">
+               <children>
+                  <TextField fx:id="tx_cariMenu" layoutX="-1.0" layoutY="9.0" onKeyReleased="#menuDataShow" prefHeight="30.0" prefWidth="764.0" />
+                  <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="772.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Vector.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="50.0" fitWidth="135.0" layoutX="1000.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/Owner%20Indicator%202.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="APPP_lihatPenjualan" layoutX="124.0" prefHeight="700.0" prefWidth="1156.0" visible="false">
+         <children>
+            <AnchorPane layoutX="25.0" layoutY="79.0" minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="1099.0" styleClass="scroll-pane" stylesheets="@OwnerDesign.css">
+               <children>
+                  <AnchorPane layoutX="10.0" layoutY="7.0" prefHeight="85.0" prefWidth="300.0" styleClass="navbarPane" stylesheets="@OwnerDesign.css">
+                     <children>
+                        <FontAwesomeIcon glyphName="USERS" layoutX="14.0" layoutY="66.0" selectionEnd="1" size="5em" />
+                        <Label fx:id="lb_nc" layoutX="20.0" layoutY="15.0" prefHeight="21.0" prefWidth="260.0" stylesheets="@OwnerDesign.css" text="0" textAlignment="RIGHT">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="LabelNavbar" />
+                              <String fx:value="kanan" />
+                           </styleClass>
+                        </Label>
+                        <Label layoutX="93.0" layoutY="64.0" styleClass="LabelNavbar" stylesheets="@OwnerDesign.css" text="Number Of Customer" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="332.0" layoutY="6.0" prefHeight="85.0" prefWidth="300.0" styleClass="navbarPane" stylesheets="@OwnerDesign.css">
+                     <children>
+                        <FontAwesomeIcon glyphName="DOLLAR" layoutX="23.0" layoutY="65.0" selectionEnd="1" size="5em" text="" />
+                        <Label fx:id="lb_ti" layoutX="20.0" layoutY="15.0" prefHeight="21.0" prefWidth="260.0" stylesheets="@OwnerDesign.css" text="0" textAlignment="RIGHT">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="LabelNavbar" />
+                              <String fx:value="kanan" />
+                           </styleClass>
+                        </Label>
+                        <Label layoutX="87.0" layoutY="63.0" styleClass="LabelNavbar" stylesheets="@OwnerDesign.css" text="Today's Income" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="653.0" layoutY="6.0" prefHeight="85.0" prefWidth="300.0" styleClass="navbarPane" stylesheets="@OwnerDesign.css">
+                     <children>
+                        <FontAwesomeIcon glyphName="SHOPPING_CART" layoutX="21.0" layoutY="63.0" selectionEnd="1" size="5em" />
+                        <Label fx:id="lb_numberSold" layoutX="15.0" layoutY="15.0" prefHeight="21.0" prefWidth="260.0" stylesheets="@OwnerDesign.css" text="0" textAlignment="RIGHT">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="LabelNavbar" />
+                              <String fx:value="kanan" />
+                           </styleClass>
+                        </Label>
+                        <Label layoutX="80.0" layoutY="63.0" styleClass="LabelNavbar" stylesheets="@OwnerDesign.css" text="Number Of Sold Product" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="lihatPenjualan_btnLaporan" layoutX="1017.0" layoutY="10.0" onMouseClicked="#btnLaporan" prefHeight="76.0" prefWidth="64.0" styleClass="navbarLaporan" stylesheets="@OwnerDesign.css">
+                     <children>
+                        <Label alignment="CENTER" layoutY="22.0" prefHeight="53.0" prefWidth="64.0" text="..." textFill="#242424">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <Separator layoutX="25.0" layoutY="178.0" prefHeight="15.0" prefWidth="1099.0" stylesheets="@OwnerDesign.css" />
+            <ComboBox fx:id="lihatPenjualan_cbBulan" layoutX="33.0" layoutY="193.0" onAction="#tampilkanChartCustomer" prefHeight="25.0" prefWidth="211.0" />
+            <Label layoutX="25.0" layoutY="51.0" prefHeight="17.0" prefWidth="331.0" text="Lihat Penjualan">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="13.0" layoutY="234.0" prefHeight="456.0" prefWidth="1129.0" stylesheets="@OwnerDesign.css">
+               <styleClass>
+                  <String fx:value="Kocak" />
+                  <String fx:value="shadow2" />
+                  <String fx:value="radius" />
+               </styleClass>
+               <children>
+                  <ScrollPane fx:id="sppppp" minViewportWidth="1110.0" prefHeight="456.0" prefWidth="1129.0">
+                     <content>
+                        <AnchorPane maxWidth="2000.0" minHeight="0.0" minWidth="0.0" prefHeight="447.0" prefWidth="1108.0">
+                           <children>
+                              <BarChart fx:id="chartBar_customer" legendSide="TOP" maxWidth="2000.0" prefHeight="449.0" prefWidth="1114.0" title="Income's Chart" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-9.0">
+                                 <xAxis>
+                                    <CategoryAxis label="Tanggal" prefHeight="20.0" prefWidth="1041.0" side="BOTTOM" tickLabelRotation="-18.4" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis prefHeight="374.0" prefWidth="51.0" side="LEFT" />
+                                 </yAxis>
+                              </BarChart>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="50.0" fitWidth="135.0" layoutX="1001.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/Owner%20Indicator%202.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txTotalPerB" editable="false" layoutX="668.0" layoutY="197.0" prefHeight="30.0" prefWidth="455.0" text="Total Pemasukan per Bulan : Rp. 10000000">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+            </TextField>
+            <StackPane fx:id="lihatPenjualan_StkPane" prefHeight="701.0" prefWidth="989.0" visible="false">
+               <children>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="693.0" prefWidth="990.0" stylesheets="@OwnerDesign.css">
+                     <children>
+                        <TableView fx:id="lihatPenjualan_tb" layoutX="7.0" layoutY="47.0" onKeyReleased="#laporanMenuCari" prefHeight="639.0" prefWidth="957.0" stylesheets="@OwnerDesign.css">
+                           <columns>
+                              <TableColumn fx:id="kolom_no" editable="false" prefWidth="49.333343505859375" text="No." />
+                              <TableColumn fx:id="lihatPenjualan_kolomId" prefWidth="96.66665649414062" text="ID Menu" />
+                              <TableColumn fx:id="lihatPenjualan_kolomNama" prefWidth="404.6667175292969" text="Nama Menu" />
+                              <TableColumn fx:id="lihatPenjualan_kolomUk" prefWidth="161.33331298828125" text="Ukuran" />
+                              <TableColumn fx:id="lihatPenjualan_kolomJumlah" prefWidth="74.0" text="DiJual" />
+                              <TableColumn fx:id="lihatPenjualan_kolomP" prefWidth="170.6666259765625" text="Jumlah Pendapatan" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="lihatPenjualan_txCari" layoutX="230.0" layoutY="14.0" onKeyReleased="#laporanMenuCari" prefHeight="25.0" prefWidth="372.0" />
+                        <ComboBox fx:id="lihatPenjualan_cbTanggal" layoutX="14.0" layoutY="14.0" onAction="#laporanMenuList" prefHeight="25.0" prefWidth="197.0" />
+                        <TextField fx:id="tx_Tdijual" editable="false" layoutX="633.0" layoutY="14.0" />
+                        <TextField fx:id="tx_Tpendapatan" editable="false" layoutX="801.0" layoutY="14.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="Background" />
+                        <String fx:value="Kocak" />
+                        <String fx:value="radius" />
+                     </styleClass>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="APPP_liharUser" layoutX="124.0" prefHeight="700.0" prefWidth="1156.0" visible="false">
+         <children>
+            <AnchorPane focusTraversable="true" layoutX="16.0" layoutY="80.0" prefHeight="589.0" prefWidth="1123.0" stylesheets="@AdminDesign.css">
+               <styleClass>
+                  <String fx:value="Kocak" />
+                  <String fx:value="radius" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <TableView fx:id="tb_kelolaUser" layoutX="13.0" layoutY="11.0" prefHeight="314.0" prefWidth="1080.0" stylesheets="@AdminDesign.css" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="15.0">
+                     <columns>
+                        <TableColumn fx:id="kolom_idUser1" prefWidth="150.66665649414062" text="ID_User" />
+                        <TableColumn fx:id="kolom_username" minWidth="0.0" prefWidth="205.33340454101562" text="Username" />
+                        <TableColumn fx:id="kolom_password" minWidth="0.0" prefWidth="289.33331298828125" text="Password" />
+                        <TableColumn fx:id="kolom_posisi" minWidth="0.0" prefWidth="202.6666259765625" text="Posisi" />
+                        <TableColumn fx:id="kolom_namaAsli" prefWidth="232.66668701171875" text="Nama Asli" />
+                     </columns>
+                     <styleClass>
+                        <String fx:value="column-header-background" />
+                        <String fx:value="column-header" />
+                        <String fx:value="cell" />
+                     </styleClass>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="50.0" fitWidth="135.0" layoutX="1001.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/Owner%20Indicator%202.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="165.0" layoutY="31.0" prefHeight="42.0" prefWidth="798.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="772.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Vector.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="tx_cariUser" layoutX="-1.0" layoutY="10.0" onKeyReleased="#userDataShow" prefHeight="30.0" prefWidth="764.0" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="22.0" layoutY="40.0" prefHeight="27.0" prefWidth="134.0" text="Lihat User">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

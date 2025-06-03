@@ -1,0 +1,215 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 8, 2025, 8:56:33 PM
+    Author     : hpfq1
+*/
+
+.LeftBackground{
+    -fx-background-color: #FFFFFF;
+}
+
+.Background{
+    -fx-background-color: #E9E9E9;
+}
+
+.separator {
+    -fx-background-color: transparent;
+    -fx-padding: 5px;
+}
+
+.separator .line {
+    -fx-border-color: black; 
+    -fx-border-width: 2px; 
+    -fx-border-style: dotted;
+}
+
+
+.tooltip {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    -fx-z-index: 1000;
+}
+
+.chart-bar {
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+}
+.default-color0.chart-bar{
+    -fx-bar-fill: #eba134;
+}
+.default-color1.chart-bar{
+    -fx-bar-fill: #944306;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background-radius: 15; 
+    -fx-border-radius: 15; 
+    -fx-border-color: #ccc; 
+    -fx-padding: 5;
+    -fx-background-color: white; 
+}
+
+
+.navbarPane{
+    -fx-background-color: #B5B5B5 ;
+    -fx-background-radius: 25; 
+    -fx-border-radius: 25;
+    
+}
+
+.LabelNavbar{
+    
+    -fx-font-family: "Arial";
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-font-weight: normal;
+}
+
+.navbarLaporan{
+    -fx-background-color: #92b0d4 ;
+    -fx-background-radius: 25; 
+    -fx-border-radius: 25;  
+}
+.navbarLaporan:hover {
+    -fx-background-color: #0c52a6;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+.navbarLaporan:pressed {
+    -fx-background-color: #92b0d4;
+    -fx-translate-y: 2px;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+
+
+
+/* Label di dalam nav button */
+.nav-button{        /* Warna text putih */
+    -fx-font-weight: bold;           /* Tebal */
+    -fx-font-size: 14px;             /* Ukuran font */
+    -fx-font-family: "Segoe UI";     /* Jenis font */
+}
+
+
+.nav-button:hover {
+    -fx-background-color: #8ac2e3;  
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 8, 0, 0, 2);
+}
+
+
+.nav-button:selected, .nav-button:active {
+    -fx-background-color: #2c3e50;  
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.4), 5, 0, 0, 0);
+}
+
+
+.nav-button:disabled {
+    -fx-background-color: #bdc3c7;
+    -fx-opacity: 0.7;
+}
+
+
+#firstNavButton {
+    -fx-background-color: #e74c3c;
+}
+
+
+#lastNavButton {
+    -fx-background-color: #2ecc71; 
+}
+
+.btnLogout:pressed {
+    -fx-background-color: #A31212;
+    -fx-translate-y: 2px;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+.btnLogout{
+    -fx-background-color: #D32F2F;
+    -fx-background-radius: 50px;
+}
+.btnLogout:hover {
+    -fx-background-color: #f27d6d;   /* Warna biru lebih gelap */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 8, 0, 0, 2);
+}
+
+
+
+.LabelNavbar{
+    
+    -fx-font-family: "Arial";
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-font-weight: normal;
+}
+
+
+.kanan{
+    -fx-alignment: CENTER_RIGHT;
+    
+}
+.Kocak{
+    -fx-background-color: #FFFFFF;
+}
+
+.shadow {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.7), 10, 0.2, 0, 0);
+}
+
+.radius{
+    -fx-background-radius: 8px;
+}
+
+
+.table-view{
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-border-color: linear-gradient(to bottom right, #595353, #625c5c);
+    -fx-border-radius: 5px;
+    -fx-border-width: 2px;
+    
+}
+
+.table-view .column-header-background{
+    -fx-background-color: #a39993;
+    -fx-background-insets: 0 0 0 0;
+}
+
+.table-view .column-header, .filter{
+    -fx-background-color: transparent;
+    -fx-size: 40px;
+     
+}
+.table-view .column-header .label{
+    -fx-text-fill: black;
+    -fx-background-color: transparent;
+    -fx-size: 40px;
+     
+}
+
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background-radius: 15; 
+    -fx-border-radius: 15; 
+    -fx-border-color: #ccc; 
+    -fx-padding: 5;
+}
+
+.scroll-pane .viewport {
+    -fx-background-radius: 15; 
+    -fx-background-color: white;
+    
+    
+}

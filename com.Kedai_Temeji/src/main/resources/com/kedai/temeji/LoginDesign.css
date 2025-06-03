@@ -1,0 +1,132 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 15, 2025, 9:32:30 PM
+    Author     : hpfq1
+*/
+
+
+
+
+.gradient {
+    -fx-background-color: linear-gradient(to bottom, 
+        #161D24, 
+        #161E24, 
+        #161E24, 
+        #171E25, 
+        #182026, 
+        #192228, 
+        #1D262D, 
+        #252F36, 
+        #2F3942);
+}
+
+.HightLigtLabel{
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+    -fx-font-weight: normal;
+    -fx-font-family: "Arial";
+}
+
+.Label{
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: normal;
+    -fx-font-family: "Arial";
+}
+
+.TextField{
+    -fx-background-color: #D9D9D9;
+    -fx-font-family: "Arial";
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-pref-width: 250px;
+    -fx-pref-height: 30px;
+    -fx-border-color: #D9D9D9;
+    -fx-border-width: 1px;
+}
+
+
+
+.PasswordField{
+    -fx-background-color: #D9D9D9;
+    -fx-font-family: "Arial";
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-pref-width: 250px;
+    -fx-pref-height: 30px;
+    -fx-border-color: #D9D9D9;
+    -fx-border-width: 1px
+}
+
+.ButtonSignIn{
+    
+        -fx-font-family: "Arial";
+        -fx-font-size: 20px;
+        -fx-text-fill: white;
+        -fx-font-weight: normal;
+        -fx-background-color: #2F3942;
+        -fx-background-radius: 30;
+        -fx-border-radius: 30;
+        -fx-pref-width: 220px;
+        -fx-pref-height: 35px;
+}
+
+
+.ButtonSignIn:hover{
+    -fx-background-color: #BDBDBD;
+    -fx-text-fill: #000;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+        
+}
+.ButtonSignIn:pressed {
+    -fx-background-color: #2F3942;
+    -fx-translate-y: 2px;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+.text-field, .password-field{
+    -fx-background-radius: 25; /* Agar sudut tetap bulat */
+    -fx-padding: 0 10 0 40; /* Atas | Kanan | Bawah | Kiri */
+    -fx-font-size: 14px; /* Supaya teks lebih proporsional */
+}
+
+.background-pane{
+    -fx-background-image: url("biji_kopi.png");
+    -fx-background-size: stretch;  /* Paksa gambar memenuhi area */
+    -fx-background-repeat: no-repeat;
+}
+
+.checkbok{
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-font-weight: normal;
+    -fx-font-family: "Arial";
+}
+
+
+.btnExit{
+    -fx-background-color: #D32F2F;
+    -fx-background-radius: 50px;
+}
+
+.btnLogout:pressed {
+    -fx-background-color: #A31212;
+    -fx-translate-y: 2px;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+.btnLogout:hover {
+    -fx-background-color: #f26d68;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+
+
+
